@@ -1,0 +1,17 @@
+POST http://localhost:8080/getSession/
+Content-Type: application/json
+
+{
+    "type": "URL",
+    "from": "this.state.email",
+    "subject": "this.state.subject",
+    "message": "this.state.message"
+}
+
+
+
+##### Verify that the requested meetup creation is available
+POST http://localhost:8080/getSession/verifyCreate/
+Content-Type: application/json
+
+{"meetupName": "sessionName", "groupSize": "groupSize",  "username": "username"}
